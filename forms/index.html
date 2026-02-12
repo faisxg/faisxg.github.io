@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Sign-in</title>
+    <script src="forms.js" defer></script>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <header><h1>Locked in Sigma Sign-in</h1></header>
+    <form id="skjema">
+        
+        <label for="email">Email:</label>
+        <input type="email" name="Email" id="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" name="Password" id="password" required>
+
+        <label for="age">Age:</label>
+        <input type="number" min="1" max="120" id="age" name="Age" required>
+
+        <label>Gender:</label>
+        <label for="male">Male:</label>
+        <input type="radio" name="gender" id="male" value="Male" required>
+        <label for="female">Female:</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        
+        <button type="submit">Sign-in</button>
+
+    </form>
+</body>
+</html>
