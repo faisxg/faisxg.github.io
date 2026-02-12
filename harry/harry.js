@@ -1,25 +1,9 @@
-const sokfelt = document.getElementById("sokfelt");
 const output = document.getElementById("resultat");
 
 async function hentHarry() {
 
     const data = await fetch('./harry.json');
     const json = await data.json();
-
-    for (let i = 0; i < json.hogwarts_houses.length; i++) {
-        console.log(json.hogwarts_houses[i].house_name);
-    }
-
-    for (let j = 0; j < json.hogwarts_houses[0].members.length; j++) {
-        console.log(json.hogwarts_houses[0].members[j].bio)
-    }
-
-    for (let i = 0; i < json.hogwarts_houses.length; i++) {
-        console.log("Medlemmer i " + json.hogwarts_houses[i].house_name + ":")
-        for (let j = 0; j < json.hogwarts_houses[i].members.length; j++) {
-            console.log(json.hogwarts_houses[i].members[j].bio)
-        }
-    }
 
     output.innerHTML = "";
 
@@ -34,10 +18,6 @@ async function hentHarry() {
             output.appendChild(sitat2)
         }
     }
-    const skuespiller = document.createElement("p");
-    skuespiller.innerText = "Skuespilleren har navnet " + json.hogwarts_houses[0].members[1].bio.actor;
-    output.appendChild(skuespiller);
-
     console.table(json)
 }
 
